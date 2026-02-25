@@ -1,0 +1,500 @@
+/* ================= RESET ================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    overflow-x: hidden;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-size: cover;
+}
+
+
+/* ================= FONTS ================= */
+
+@font-face {
+    font-family: 'Benguiat';
+    src: url('fonts/BenguiatGothicCTT.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Karusel';
+    src: url('fonts/Karusel2019.woff') format('woff');
+}
+
+
+/* ================= CONTAINER ================= */
+
+.container {
+    width: 90%;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+
+/* ================= HEADER ================= */
+
+.header {
+    position: absolute;
+    top: 20px;
+    left: 260px; /* расстояние слов после лого карамельки */
+    right: 20px;
+    transform: translateX(-10%); /* позиционирование шторки от левой стороны */
+    width: 85%; /* ширина шторки */
+    height: 60px;
+    z-index: 1000; /* ← ВАЖНО */
+}
+
+
+.header-inner {
+    width: 100%;
+    height: 100%;
+    background: #F8F6EF;
+    border-radius: 50px;
+    border: 2px solid #000;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* ВАЖНО */
+
+    padding: 0 60px;
+}
+
+.logo-small {
+    height: 36px;
+}
+
+.nav {
+    display: flex;
+    gap: 170px; /* расстояние между словами верхней шторки */
+}
+
+.nav a {
+    font-family: 'Benguiat', sans-serif;
+    font-size: 18px;
+    letter-spacing: 1px;
+    color: #000;
+    text-decoration: none;
+}
+
+
+/* ================= HERO ================= */
+
+.hero {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    background: url("images/bg.png") center top / cover no-repeat;
+    padding-top: 180px;
+}
+
+.hero-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.hero-left {
+    text-align: center;
+}
+
+.logo-big {
+    position: absolute;
+    top: 100px; /* Большое лого вверх-вниз */
+    left: 50%; /* Подгонка снизу */
+    transform: translateX(-80%); /* Большое лого лево-право */
+    width: 954px;
+}
+
+.cloud-block {
+    position: absolute;
+    top: 420px; /* Облако вверх-вниз */
+    left: 50%;
+    transform: translateX(-95%); /* Облако лево-право */
+    width: 700px;
+}
+
+.cloud-img {
+    width: 100%;
+    display: block;
+}
+
+.cloud-text {
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: 70%;
+}
+
+
+.cloud-text img {
+    display: block;
+    margin: 0 auto 15px;
+}
+
+.cloud-text img:nth-child(1) {
+    max-width: 420px;
+}
+
+.cloud-text img:nth-child(2) {
+    max-width: 260px;
+}
+
+.cloud-text img:nth-child(3) {
+    max-width: 320px;
+}
+
+.btn-main {
+    display: inline-flex;
+    align-items: center;
+    gap: 35px; /* Размер кнопки */
+
+    padding: 22px 45px;
+    padding-left: 80px;   /* Текст на кнопке - правее */
+    border-radius: 60px;
+
+    background: #5EC6C6;
+    border: 4px solid #fff;
+
+    font-family: 'Karusel', sans-serif;
+    font-size: 30px;   /* увеличивай число */
+    letter-spacing: 1px; /* чуть раздвинет буквы */
+    color: #fff;
+
+    cursor: pointer;
+    position: absolute;
+    left: 80px;     /* левее */
+    bottom: 40px;   /* ниже */
+    transition: 0.3s ease;
+}
+
+/* Свечение */
+.btn-main::after {
+    content: "";
+    position: absolute;
+    bottom: -35px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 130%;
+    height: 60px;
+
+    background: radial-gradient(ellipse at center,
+        rgba(94,198,198,0.5) 0%,
+        rgba(94,198,198,0.3) 40%,
+        transparent 75%);
+    z-index: -1;
+}
+
+/* Кружок со стрелкой */
+.arrow-circle {
+    width: 48px;
+    height: 48px;
+
+    border: 3px solid #fff;
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 22px;
+}
+
+/* Hover */
+.btn-main:hover {
+    transform: scale(1.05);
+}
+
+
+
+.hero-right {
+    position: absolute;
+    top: 0;
+    right: -20px;
+    width: 649px;
+    height: 954px;
+}
+
+.boy {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.candy {
+    position: absolute;
+    bottom: 0px; /* конфета вверх-вниз */
+    left: 100px;   /* было -80px → теперь правее */
+    width: 260px;
+}
+
+
+/* ================= ABOUT ================= */
+
+.about {
+    min-height: 900px;
+    margin-top: -20px; /* регулируешь цифру */
+    background: url("images/about-bg.png") top center / 85% auto no-repeat;
+    background-size: 1650px auto;
+    background-color: #FBF9EC
+}
+
+
+/* ================= ZONES ================= */
+
+.zones {
+    position: relative;
+    min-height: 100vh;
+    background: url("images/zones-bg.png") top center / 85% auto no-repeat;
+    background-size: 1650px auto;
+    background-color: #FBF9EC
+}
+.zones-btn {
+    position: absolute;
+    bottom: 65px;  /* регулируешь вверх-вниз */
+    left: 100px;    /* регулируешь влево-вправо */
+}
+/* ================= OFFER ================= */
+
+.offer {
+    width: 100%;
+    position: relative;
+
+    background-image: url("images/bg.png");
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: 150% auto; /* ВАЖНО */
+}
+
+.offer__container {
+    width: 100%;
+    max-width: none;
+}
+
+.offer__image {
+    width: 85%;
+}
+.offer-btn {
+    position: absolute;
+    bottom: 165px;  /* вверх-вниз */
+    left: 50px;
+}
+.offer .offer-btn {
+    font-size: 26px;
+    padding: 26px 60px;
+}
+
+
+
+/* ================= PRICES ================= */
+
+.prices {
+    width: 100%;
+    padding: 300px 0;
+    background: url("images/price2.png") center top / 85% auto no-repeat;
+    background-color: #FBF9EC
+}
+
+
+/* ================= PROMO ================= */
+
+.promo {
+    position: relative;
+    width: 100%;
+    min-height: 900px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #FBF9EC
+}
+
+.promo-img {
+    width: 85%;
+    display: block;
+    margin: 0 auto;
+}
+.promo-btn {
+    position: absolute;
+
+    bottom: 150px;
+    left: 360px;
+
+    transform: scale(1.4);
+}
+
+
+/* ================= BIRTHDAY ================= */
+
+.birthday {
+    position: relative;
+
+    width: 100%;
+    padding: 350px 0;
+
+    background: url("images/dr.png") center / 85% no-repeat;
+    background-color: #FBF9EC;
+}
+.birthday-inner {
+    position: relative;
+    width: 85%;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+.birthday-btn {
+    position: absolute;
+
+    bottom: -210px; /* вверх вниз */
+    left: 80px;   /* лево право */
+
+    transform: scale(1.2);
+}
+
+
+/* ================= CONTACT ================= */
+
+.contact {
+    background: #e45a95;
+    padding: 120px 0;
+    width: 100%;
+}
+
+.contact-wrapper {
+    width: 85%;
+    margin: 0 auto;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contact-title {
+    font-family: 'Karusel', sans-serif;
+    font-size: 48px;
+    text-align: center;
+    margin-bottom: 60px;
+    line-height: 1.3;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+    margin-bottom: 100px;
+}
+
+.contact-form input {
+    width: 420px;
+    height: 55px;
+    padding: 0 20px;
+    border: none;
+    background: #dcd6c9;
+    font-family: 'Karusel', sans-serif;
+    font-size: 18px;
+}
+
+.contact-btn {
+    margin-top: 10px;
+    padding: 18px 60px;
+    border-radius: 50px;
+    border: 3px solid #fff;
+    background: #4bb3b3;
+    color: #fff;
+    font-family: 'Karusel', sans-serif;
+    font-size: 20px;
+    cursor: pointer;
+    position: relative;
+}
+
+.contact-btn::after {
+    content: "";
+    position: absolute;
+    bottom: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 130%;
+    height: 50px;
+    background: radial-gradient(ellipse at center, rgba(75,179,179,0.4) 0%, transparent 70%);
+    z-index: -1;
+}
+
+.contact-btn:hover {
+    transform: scale(1.05);
+}
+
+.privacy {
+    font-size: 14px;
+    text-align: center;
+    width: 420px;
+    margin-top: 15px;
+}
+
+.contact-info {
+    width: 100%;
+    max-width: 700px;
+    font-family: 'Karusel', sans-serif;
+    font-size: 22px;
+    line-height: 1.8;
+}
+
+.contact-info h3 {
+    font-size: 40px;
+    margin-bottom: 25px;
+}
+
+.contact-info a {
+    color: #fff;
+    text-decoration: underline;
+}
+
+/* ===== КНОПКИ ===== */
+
+.main-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 22px 55px;
+    border-radius: 60px;
+
+    background: #5EC6C6;
+    color: white;
+
+    font-family: 'Karusel';
+    font-size: 22px;
+
+    border: none;
+    cursor: pointer;
+
+    position: relative;
+    transition: 0.3s;
+}
+
+.main-btn:hover {
+    transform: scale(1.05);
+}
+
+.main-btn::after {
+    content: "";
+    position: absolute;
+    bottom: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 130%;
+    height: 50px;
+    background: radial-gradient(
+        ellipse at center,
+        rgba(94,198,198,0.4) 0%,
+        transparent 70%
+    );
+    z-index: -1;
+}
